@@ -13,6 +13,12 @@ def patrat_perfect(n):
         if i*i==n:
             return True
     return False
+def test_patrat_perfect():
+    assert(patrat_perfect(25)==True)
+    assert (patrat_perfect(16) == True)
+    assert (patrat_perfect(2) == False)
+    assert (patrat_perfect(31) == False)
+
 def get_longest_all_perfect_squares(lst):
     lmax=0
     l=0
@@ -34,7 +40,7 @@ def test_get_longest_all_perfect_squares():
     assert get_longest_all_perfect_squares([1,2,3,4,5,16,36,64,121,5]) == [16,36,64,121]
     assert get_longest_all_perfect_squares([7,11,19,-3,0]) == []
     assert get_longest_all_perfect_squares([4,9,16,25,17,1,4,4,9,36,400]) == [1,4,4,9,36,400]
-test_get_longest_all_perfect_squares()
+
 
 def divizori(n):
     cnt=0
@@ -42,6 +48,12 @@ def divizori(n):
         if n%i==0:
             cnt=cnt+1
     return cnt
+def test_divizori():
+    assert(divizori(6)==4)
+    assert (divizori(4) == 3)
+    assert (divizori(11) == 2)
+    assert (divizori(41) == 2)
+
 def get_longest_same_div_count(lst):
     lmax=0
     l=0
@@ -64,7 +76,7 @@ def test_get_longest_same_div_count() :
     assert get_longest_same_div_count([4,7,11,17,19,22,32]) == [7,11,17,19]
     assert get_longest_same_div_count([5,4,9,25,121,169,74,0]) ==[4,9,25,121,169]
     assert get_longest_same_div_count([6,77,39,35]) == [6,77,39,35]
-test_get_longest_same_div_count()
+
 
 def start():
     lst=[]
@@ -82,5 +94,9 @@ def start():
             print("Subsecventa este: ",rez)
         else:
             break
+test_get_longest_same_div_count()
+test_divizori()
+test_get_longest_all_perfect_squares()
+test_patrat_perfect()
 start()
 
